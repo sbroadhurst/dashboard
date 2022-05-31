@@ -104,7 +104,7 @@
   dependencies:
     "@syncfusion/ej2-icons" "~20.1.55"
 
-"@syncfusion/ej2-buttons@~20.1.55":
+"@syncfusion/ej2-buttons@~20.1.55", "@syncfusion/ej2-buttons@20.1.55":
   "integrity" "sha512-4Dw5z9RL5TY5z3mZ7X66pzHegdgmeSt41gRDnhXqmq6k60k9O5dqCvfSe7op4Ufo8rRt9SWDd8UEqUAfzIxGfg=="
   "resolved" "https://registry.npmjs.org/@syncfusion/ej2-buttons/-/ej2-buttons-20.1.55.tgz"
   "version" "20.1.55"
@@ -486,12 +486,21 @@
     "@syncfusion/ej2-inputs" "~20.1.55"
     "@syncfusion/ej2-splitbuttons" "~20.1.55"
 
-"@syncfusion/ej2-react-base@~20.1.57", "@syncfusion/ej2-react-base@~20.1.58":
+"@syncfusion/ej2-react-base@~20.1.55", "@syncfusion/ej2-react-base@~20.1.57", "@syncfusion/ej2-react-base@~20.1.58":
   "integrity" "sha512-lToVE196mmoMX1KE94tPXghozmngq4Y8pCTsiBZfdc2oIq1soXX/pMcvh+Tj6ciQf53PKmWetr+oO+lFiYCl+w=="
   "resolved" "https://registry.npmjs.org/@syncfusion/ej2-react-base/-/ej2-react-base-20.1.58.tgz"
   "version" "20.1.58"
   dependencies:
     "@syncfusion/ej2-base" "~20.1.57"
+
+"@syncfusion/ej2-react-buttons@^20.1.55":
+  "integrity" "sha512-D/LldwQeYqVoL6MFKLnTU/WczTFAWI0MV/mnTkGQmRIjD7wG8EvjUbadeoKKYU9UNAiSGCHc52pJw2S3ybiqqw=="
+  "resolved" "https://registry.npmjs.org/@syncfusion/ej2-react-buttons/-/ej2-react-buttons-20.1.55.tgz"
+  "version" "20.1.55"
+  dependencies:
+    "@syncfusion/ej2-base" "~20.1.55"
+    "@syncfusion/ej2-buttons" "20.1.55"
+    "@syncfusion/ej2-react-base" "~20.1.55"
 
 "@syncfusion/ej2-react-calendars@^20.1.58":
   "integrity" "sha512-lFxqwQ9A+WqECjT8sevUo8XCQlGw12cRs4vr8pe8zvc86Bb598qHwelbkH8UQSeGbkXb8uQQDkOo1Da1fogNdw=="
