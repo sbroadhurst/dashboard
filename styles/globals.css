@@ -1,9 +1,19 @@
-@import url('https://cdn.syncfusion.com/ej2/material.css');
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-react-popups/styles/material.css';
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .activeLink {
+    @apply m-2 flex items-center gap-5 rounded-lg pl-3 pt-3 pb-2.5 text-lg text-white;
+  }
+  .normalLink {
+    @apply m-2 flex items-center gap-5 rounded-lg pl-3 pt-3 pb-2.5 text-lg text-gray-700 hover:bg-light-gray dark:text-gray-200 dark:hover:text-black;
+  }
+}
 
 body {
   margin: 0;
