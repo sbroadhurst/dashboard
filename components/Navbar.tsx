@@ -48,7 +48,7 @@ const Navbar = () => {
   })
 
   useEffect(() => {
-    if (screenSize && screenSize <= 900) {
+    if (screenSize && screenSize <= 1024) {
       setActiveMenu(false)
     } else {
       setActiveMenu(true)
@@ -56,15 +56,16 @@ const Navbar = () => {
   }, [screenSize, setActiveMenu])
 
   return (
-    <div className="relative flex justify-between p-2 md:mx-6">
-      <NavButton
-        title="Menu"
-        customFunc={() => setActiveMenu((prevActiveMenu: boolean) => !prevActiveMenu)}
-        color="blue"
-        icon={<AiOutlineMenu />}
-      />
-
-      <div className="flex">
+    <div className="navbar fixed w-full bg-main-bg dark:bg-main-dark-bg md:static">
+      <div className="flex justify-between p-2 md:mx-6">
+        {screenSize && screenSize <= 1024 ? (
+          <NavButton
+            title="Menu"
+            customFunc={() => setActiveMenu((prevActiveMenu: boolean) => !prevActiveMenu)}
+            color="blue"
+            icon={<AiOutlineMenu />}
+          />
+        ) : null}
         <NavButton title="Cart" customFunc={() => handleClick('cart')} color="blue" icon={<FiShoppingCart />} />
         <NavButton
           title="Chat"

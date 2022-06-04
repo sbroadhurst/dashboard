@@ -14,7 +14,7 @@ type Sparkline = {
   height: string
   width: string
   color: string
-  data: any
+  data: { x: number; y: number }[]
   currentColor: string
 }
 
