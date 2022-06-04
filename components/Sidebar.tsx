@@ -50,7 +50,7 @@ const Sidebar = () => {
                 <div key={i}>
                   <p className="m-3 mt-4 uppercase text-gray-400">{item.title}</p>
                   {item.links.map((link, index) => {
-                    const href = link.href ? link.href : link.name
+                    const href = link.href
                     return (
                       <Link href={href} key={index}>
                         <div

@@ -8,10 +8,10 @@
 
 @layer components {
   .activeLink {
-    @apply m-2 flex items-center gap-5 rounded-lg pl-3 pt-3 pb-2.5 text-lg text-white;
+    @apply m-2 flex items-center gap-5 rounded-lg pl-3 pt-3 pb-2.5 text-lg text-red-800;
   }
   .normalLink {
-    @apply m-2 flex items-center gap-5 rounded-lg pl-3 pt-3 pb-2.5 text-lg text-gray-700 hover:bg-light-gray dark:text-gray-200 dark:hover:text-black;
+    @apply m-2 flex cursor-pointer items-center gap-5 rounded-lg pl-3 pt-3 pb-2.5 text-lg text-gray-700 hover:bg-light-gray dark:text-gray-200 dark:hover:text-black;
   }
 }
 

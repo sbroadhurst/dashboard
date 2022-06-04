@@ -397,6 +397,7 @@ export const links = [
     links: [
       {
         name: 'ecommerce',
+        href: '/ecommerce',
         icon: <FiShoppingBag />,
       },
     ],
@@ -407,14 +408,17 @@ export const links = [
     links: [
       {
         name: 'orders',
+        href: '/orders',
         icon: <AiOutlineShoppingCart />,
       },
       {
         name: 'employees',
+        href: '/employees',
         icon: <IoMdContacts />,
       },
       {
         name: 'customers',
+        href: '/customers',
         icon: <RiContactsLine />,
       },
     ],
@@ -423,23 +427,23 @@ export const links = [
     title: 'Apps',
     links: [
       {
-        name: ' calendar',
-        href: 'apps/calender',
+        name: 'calendar',
+        href: '/apps/calendar',
         icon: <AiOutlineCalendar />,
       },
       {
         name: 'kanban',
-        href: 'apps/kanban',
+        href: '/apps/kanban',
         icon: <BsKanban />,
       },
       {
         name: 'editor',
-        href: 'apps/editor',
+        href: '/apps/editor',
         icon: <FiEdit />,
       },
       {
         name: 'color-picker',
-        href: 'apps/colorPicker',
+        href: '/apps/colorPicker',
         icon: <BiColorFill />,
       },
     ],
@@ -449,42 +453,43 @@ export const links = [
     links: [
       {
         name: 'line',
-        href: 'charts/line',
+        href: '/charts/line',
         icon: <AiOutlineStock />,
       },
       {
         name: 'area',
-        href: 'charts/area',
+        href: '/charts/area',
         icon: <AiOutlineAreaChart />,
       },
 
       {
         name: 'bar',
-        href: 'charts/bar',
+        href: '/charts/bar',
         icon: <AiOutlineBarChart />,
       },
       {
         name: 'pie',
+        href: '/charts/pie',
         icon: <FiPieChart />,
       },
       {
         name: 'financial',
-        href: 'charts/financial',
+        href: '/charts/financial',
         icon: <RiStockLine />,
       },
       {
         name: 'color-mapping',
-        href: 'charts/colorMapping',
+        href: '/charts/colorMapping',
         icon: <BsBarChart />,
       },
       {
         name: 'pyramid',
-        href: 'charts/pyramid',
+        href: '/charts/pyramid',
         icon: <GiLouvrePyramid />,
       },
       {
         name: 'stacked',
-        href: 'charts/stacked',
+        href: '/charts/stacked',
         icon: <AiOutlineBarChart />,
       },
     ],
