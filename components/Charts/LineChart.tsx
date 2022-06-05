@@ -11,10 +11,10 @@ import {
   AxisModel,
 } from '@syncfusion/ej2-react-charts'
 import { lineCustomSeries, LinePrimaryXAxis, LinePrimaryYAxis } from '../../public/data/dummy'
-import { useStateContext } from '../../contexts/ContextProvider'
+import { useTheme } from 'next-themes'
 
 const LineChart = () => {
-  const { currentMode } = useStateContext()
+  const { theme } = useTheme()
 
   const primaryXAxis: AxisModel = {
     ...LinePrimaryXAxis,
@@ -36,7 +36,7 @@ const LineChart = () => {
       primaryYAxis={primaryYAxis}
       chartArea={{ border: { width: 0 } }}
       tooltip={{ enable: true }}
-      background={currentMode === 'Dark' ? '#33373E' : 'white'}>
+      background={theme === 'dark' ? '#33373E' : 'white'}>
       <Inject services={[LineSeries, DateTime, Legend, Tooltip]} />
       <SeriesCollectionDirective>
         {lineCustomSeries.map((item, index) => (

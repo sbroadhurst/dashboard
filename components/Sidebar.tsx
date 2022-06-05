@@ -55,7 +55,7 @@ const Sidebar = () => {
                       <Link href={href} key={index}>
                         <div
                           className={router?.pathname === href ? 'activeLink' : 'normalLink'}
-                          style={{ backgroundColor: router?.pathname === href ? currentColor : '' }}
+                          style={{ backgroundColor: router?.pathname === href ? currentColor : 'transparent' }}
                           onClick={handleCloseSideBar}>
                           {link.icon}
                           <span className="capitalize">{link.name}</span>

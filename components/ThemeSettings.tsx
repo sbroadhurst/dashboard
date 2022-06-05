@@ -7,7 +7,7 @@ import { useStateContext } from '../contexts/ContextProvider'
 import { useTheme } from 'next-themes'
 
 const ThemeSettings = () => {
-  const { setColor, setMode, currentMode, currentColor, setThemeSettings, themeSettings } = useStateContext()
+  const { setColor, currentColor, setThemeSettings, themeSettings } = useStateContext()
   const { theme, setTheme } = useTheme()
 
   return (

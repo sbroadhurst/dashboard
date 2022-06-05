@@ -25,12 +25,12 @@ import ThemeSettings from '../components/ThemeSettings'
 import { ThemeProvider } from 'next-themes'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const { activeMenu, currentMode } = useStateContext()
+  const { activeMenu } = useStateContext()
 
   return (
     <ContextProvider>
       <ThemeProvider attribute="class">
-        <div className={`g  relative flex`}>
+        <div className={`relative flex`}>
           <Settings />
           <Sidebar />
           <div className={`min-h-screen w-full  ${activeMenu ? ' lg:ml-72' : 'flex-2'}`}>

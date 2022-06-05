@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react'
+import React, { createContext, useContext, useEffect, useState } from 'react'
 
 interface State {
   chat: boolean
@@ -23,9 +23,7 @@ interface MyContext {
   screenSize: undefined | number
   setScreenSize?: any
   currentColor: string
-  currentMode: string
   setColor?: any
-  setMode?: any
   themeSettings: boolean
   setThemeSettings?: any
   initialState: any
@@ -36,7 +34,6 @@ const StateContext = createContext<MyContext>({
   isClicked: initialState,
   screenSize: undefined,
   currentColor: '#03C9D7',
-  currentMode: 'Light',
   themeSettings: false,
   initialState: initialState,
 })
@@ -46,13 +43,14 @@ export const ContextProvider = ({ children }: any) => {
   const [isClicked, setIsClicked] = useState(initialState)
   const [screenSize, setScreenSize] = useState(undefined)
   const [currentColor, setCurrentColor] = useState('#03C9D7')
-  const [currentMode, setCurrentMode] = useState('Light')
   const [themeSettings, setThemeSettings] = useState(false)
 
-  const setMode = (e: any) => {
-    setCurrentMode(e.target.value)
-    localStorage.setItem('themeMode', e.target.value)
-  }
+  useEffect(() => {
+    const localStorageColor = localStorage.getItem('colorModes')
+    if (localStorageColor) {
+      setColor(localStorageColor)
+    }
+  })
 
   const setColor = (color: string) => {
     setCurrentColor(color)
@@ -75,11 +73,9 @@ export const ContextProvider = ({ children }: any) => {
         screenSize,
         setScreenSize,
         currentColor,
-        currentMode,
         themeSettings,
         setThemeSettings,
         setColor,
-        setMode,
       }}>
       {children}
     </StateContext.Provider>
