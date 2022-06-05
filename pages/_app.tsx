@@ -22,21 +22,24 @@ import '../node_modules/@syncfusion/ej2-layouts/styles/material.css'
 import '../node_modules/@syncfusion/ej2-react-kanban/styles/material.css'
 import '../node_modules/@syncfusion/ej2-richtexteditor/styles/material.css'
 import ThemeSettings from '../components/ThemeSettings'
+import { ThemeProvider } from 'next-themes'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const { activeMenu, currentMode } = useStateContext()
 
   return (
     <ContextProvider>
-      <div className={`relative  flex dark:bg-main-dark-bg`}>
-        <Settings />
-        <Sidebar />
-        <div className={`min-h-screen w-full bg-main-bg dark:bg-main-bg ${activeMenu ? ' lg:ml-72' : 'flex-2'}`}>
-          <Navbar />
-          <Component {...pageProps} />
+      <ThemeProvider attribute="class">
+        <div className={`g  relative flex`}>
+          <Settings />
+          <Sidebar />
+          <div className={`min-h-screen w-full  ${activeMenu ? ' lg:ml-72' : 'flex-2'}`}>
+            <Navbar />
+            <Component {...pageProps} />
+          </div>
+          <ThemeSettings />
         </div>
-        <ThemeSettings />
-      </div>
+      </ThemeProvider>
     </ContextProvider>
   )
 }

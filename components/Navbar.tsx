@@ -37,7 +37,7 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }: NavProps) => (
 )
 
 const Navbar = () => {
-  const { activeMenu, setActiveMenu, isClicked, setIsClicked, handleClick, screenSize, setScreenSize, currentColor } =
+  const { currentColor, activeMenu, setActiveMenu, handleClick, isClicked, setScreenSize, screenSize } =
     useStateContext()
 
   useEffect(() => {
@@ -84,20 +84,20 @@ const Navbar = () => {
           <div
             className="flex cursor-pointer items-center gap-2 rounded-lg hover:bg-light-gray "
             onClick={() => handleClick('userProfile')}>
-            <Image src={avatar} alt="avatar" width={32} height={32} className="rounded-full" />
+            <Image src={avatar} alt="avatar" width={16} height={16} className="rounded-full" />
             <p>
               <span className="text-14 text-gray-400">Hi, </span>{' '}
-              <span className="ml-1 text-14 font-bold text-gray-400">Michael</span>
+              <span className="text-14 ml-1 font-bold text-gray-400">Michael</span>
             </p>
             <MdKeyboardArrowDown className="text-14 text-gray-400" />
           </div>
         </TooltipComponent>
 
         {/* NavBar Select Components*/}
-        {isClicked.cart && <Cart />}
-        {isClicked.chat && <Chat />}
-        {isClicked.notification && <Notification />}
-        {isClicked.userProfile && <UserProfile />}
+        {isClicked?.cart && <Cart />}
+        {isClicked?.chat && <Chat />}
+        {isClicked?.notification && <Notification />}
+        {isClicked?.userProfile && <UserProfile />}
       </div>
     </div>
   )

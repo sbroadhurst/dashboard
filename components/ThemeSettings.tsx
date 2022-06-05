@@ -4,15 +4,19 @@ import { BsCheck } from 'react-icons/bs'
 import { TooltipComponent } from '@syncfusion/ej2-react-popups'
 import { themeColors } from '../public/data/dummy'
 import { useStateContext } from '../contexts/ContextProvider'
+import { useTheme } from 'next-themes'
 
 const ThemeSettings = () => {
   const { setColor, setMode, currentMode, currentColor, setThemeSettings, themeSettings } = useStateContext()
+  const { theme, setTheme } = useTheme()
 
   return (
     <>
       {themeSettings ? (
         <div className="nav-item fixed top-0 right-0 w-screen bg-half-transparent">
-          <div className="dark:[#484b52] float-right h-screen w-400 bg-white dark:text-gray-200">
+          <div
+            className="dark:[#484b52] w-400 float-right h-screen dark:text-gray-200"
+            style={{ backgroundColor: theme === 'dark' ? 'black' : 'white' }}>
             <div className="ml-4 flex items-center justify-between p-4">
               <p className="text-xl font-semibold">Settings</p>
               <button
@@ -25,7 +29,7 @@ const ThemeSettings = () => {
             </div>
 
             {/* light or dark */}
-            <div className="ml-4 mb-4 flex-col border-t-1 border-color pl-4">
+            <div className="border-t-1 border-color ml-4 mb-4 flex-col pl-4">
               <p className="text-lg font-semibold">Theme Options</p>
               <div className="mt-4">
                 <input
@@ -34,8 +38,8 @@ const ThemeSettings = () => {
                   name="theme"
                   value="Light"
                   className="cursor-pointer"
-                  onChange={setMode}
-                  checked={currentMode === 'Light'}
+                  onChange={() => setTheme('light')}
+                  checked={theme === 'light'}
                 />
                 <label htmlFor="light" className="text-md ml-2 cursor-pointer">
                   Light
@@ -48,8 +52,8 @@ const ThemeSettings = () => {
                   name="theme"
                   value="Dark"
                   className="cursor-pointer"
-                  onChange={setMode}
-                  checked={currentMode === 'Dark'}
+                  onChange={() => setTheme('dark')}
+                  checked={theme === 'dark'}
                 />
                 <label htmlFor="dark" className="text-md ml-2 cursor-pointer">
                   Dark
@@ -58,7 +62,7 @@ const ThemeSettings = () => {
             </div>
 
             {/* theme colors */}
-            <div className="ml-4 flex-col border-t-1 border-color pl-4">
+            <div className="border-t-1 border-color ml-4 flex-col pl-4">
               <p className="text-lg font-semibold">Theme Colors</p>
               <div className="flex gap-3">
                 {themeColors.map((item, index) => (

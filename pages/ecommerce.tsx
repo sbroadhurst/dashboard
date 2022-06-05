@@ -14,7 +14,7 @@ function Ecommerce() {
   return (
     <div className="mt-12">
       <div className="flex flex-wrap justify-center lg:flex-nowrap ">
-        <div className="m-3 h-44 w-full rounded-xl bg-white bg-hero-pattern bg-cover bg-center bg-no-repeat p-8 pt-9 dark:bg-secondary-dark-bg dark:text-gray-200 lg:w-80">
+        <div className="m-3 h-44 w-full rounded-xl bg-hero-pattern bg-cover bg-center bg-no-repeat p-8 pt-9 dark:bg-secondary-dark-bg dark:text-gray-200 lg:w-80">
           <div className="flex items-center justify-between">
             <div>
               <p className="font-bold text-gray-400">Earnings</p>
@@ -23,7 +23,7 @@ function Ecommerce() {
             <button
               type="button"
               style={{ backgroundColor: currentColor }}
-              className="opacity-0.9 rounded-full p-4 text-2xl text-white  hover:drop-shadow-xl">
+              className="opacity-0.9 rounded-full p-4 text-2xl hover:drop-shadow-xl">
               <BsCurrencyDollar />
             </button>
           </div>
@@ -35,7 +35,7 @@ function Ecommerce() {
           {earningData.map((item) => (
             <div
               key={item.title}
-              className="h-44 rounded-2xl bg-white p-4 pt-9 shadow-2xl dark:bg-secondary-dark-bg dark:text-gray-200 md:w-56">
+              className="h-44 rounded-2xl  p-4 pt-9 shadow-2xl dark:bg-secondary-dark-bg dark:text-gray-200 md:w-56">
               <button
                 type="button"
                 style={{ color: item.iconColor, backgroundColor: item.iconBg }}
@@ -55,11 +55,11 @@ function Ecommerce() {
       </div>
 
       <div className="flex flex-wrap justify-center gap-10">
-        <div className="m-3 rounded-2xl bg-white p-4 shadow-2xl dark:bg-secondary-dark-bg dark:text-gray-200 md:w-780">
+        <div className="md:w-780 m-3 rounded-2xl p-4 shadow-2xl dark:bg-secondary-dark-bg dark:text-gray-200">
           <div className="flex justify-between">
             <p className="text-xl font-semibold">Revenue Updates</p>
             <div className="flex items-center gap-4">
-              <p className="flex items-center gap-2 text-gray-600 hover:drop-shadow-xl">
+              <p className="flex items-center gap-2 hover:drop-shadow-xl" style={{ color: 'black' }}>
                 <span>
                   <GoPrimitiveDot />
                 </span>
@@ -74,11 +74,11 @@ function Ecommerce() {
             </div>
           </div>
           <div className="mt-10 flex flex-wrap justify-center gap-10">
-            <div className="m-4 border-r-1 border-color pr-10 ">
+            <div className="border-r-1 border-color m-4 pr-10 ">
               <div>
                 <p>
                   <span className="text-3xl font-semibold">$93,438.00</span>
-                  <span className="ml-3 cursor-pointer rounded-full bg-green-400 p-1.5 text-xs text-white hover:drop-shadow-xl">
+                  <span className="t ml-3 cursor-pointer rounded-full bg-green-400 p-1.5 text-xs hover:drop-shadow-xl">
                     23%
                   </span>
                 </p>

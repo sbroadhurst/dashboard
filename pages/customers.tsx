@@ -17,7 +17,7 @@ import Header from '../components/Header'
 
 function customers() {
   return (
-    <div className="m-2 rounded-3xl bg-white p-2 md:m-10 md:p-10">
+    <div className="m-2 rounded-3xl bg-white p-2 dark:bg-secondary-dark-bg md:m-10 md:p-10">
       <Header title="Customers" category="Page" />
       <GridComponent
         width="auto"
