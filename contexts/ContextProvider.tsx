@@ -28,6 +28,7 @@ interface MyContext {
   setMode?: any
   themeSettings: boolean
   setThemeSettings?: any
+  initialState: any
 }
 
 const StateContext = createContext<MyContext>({
@@ -37,6 +38,7 @@ const StateContext = createContext<MyContext>({
   currentColor: '#03C9D7',
   currentMode: 'Light',
   themeSettings: false,
+  initialState: initialState,
 })
 
 export const ContextProvider = ({ children }: any) => {
@@ -64,6 +66,7 @@ export const ContextProvider = ({ children }: any) => {
   return (
     <StateContext.Provider
       value={{
+        initialState,
         activeMenu,
         setActiveMenu,
         isClicked,

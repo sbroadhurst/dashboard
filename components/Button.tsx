@@ -1,7 +1,18 @@
 import React from 'react'
 import { useStateContext } from '../contexts/ContextProvider'
 
-const Button = ({ icon, bgColor, color, bgHoverColor, size, text, borderRadius, width }) => {
+type ButtonProps = {
+  icon?: any
+  bgColor?: string
+  color: string
+  bgHoverColor?: string
+  size?: string
+  text?: string
+  borderRadius: string
+  width?: string
+}
+
+const Button = ({ icon, bgColor, color, bgHoverColor, size, text, borderRadius, width }: ButtonProps) => {
   const { setIsClicked, initialState } = useStateContext()
 
   return (

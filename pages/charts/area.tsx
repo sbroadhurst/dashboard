@@ -11,11 +11,9 @@ import {
 } from '@syncfusion/ej2-react-charts'
 import Header from '../../components/Header'
 import { areaCustomSeries, areaPrimaryXAxis, areaPrimaryYAxis } from '../../public/data/dummy'
-import { useStateContext } from '../../contexts/ContextProvider'
 import { useTheme } from 'next-themes'
 
 function Area() {
-  const { currentMode } = useStateContext()
   const { theme } = useTheme()
 
   const primaryXAxis: AxisModel = {

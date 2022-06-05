@@ -21,9 +21,6 @@ export const Cart = () => {
             bgHoverColor="light-gray"
             size="2xl"
             borderRadius="50%"
-            bgColor={undefined}
-            text={undefined}
-            width={undefined}
           />
         </div>
         {cartData?.map((item, index) => (
@@ -62,16 +59,7 @@ export const Cart = () => {
           </div>
         </div>
         <div className="mt-5">
-          <Button
-            color="white"
-            bgColor={currentColor}
-            text="Place Order"
-            borderRadius="10px"
-            width="full"
-            icon={undefined}
-            bgHoverColor={undefined}
-            size={undefined}
-          />
+          <Button color="white" bgColor={currentColor} text="Place Order" borderRadius="10px" width="full" />
         </div>
       </div>
     </div>
