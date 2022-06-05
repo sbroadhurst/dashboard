@@ -29,7 +29,7 @@ const Sidebar = () => {
             <div className="flex items-center justify-between">
               <Link href="/">
                 <div
-                  className="ml-3 mt-4 flex items-center gap-3 text-xl font-extrabold tracking-tight text-slate-900 dark:text-white"
+                  className="ml-3 mt-4 flex cursor-pointer items-center gap-3 text-xl font-extrabold tracking-tight text-slate-900 dark:text-white"
                   onClick={handleCloseSideBar}>
                   <SiShopware /> <span>Shop Dash</span>
                 </div>

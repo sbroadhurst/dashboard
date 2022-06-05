@@ -1,12 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-// import styles from '../styles/Home.module.css'
-import { FiSettings } from 'react-icons/fi'
-import { TooltipComponent } from '@syncfusion/ej2-react-popups'
-import Sidebar from '../components/Sidebar'
-import Navbar from '../components/Navbar'
 import { useStateContext } from '../contexts/ContextProvider'
-import Ecommerce from '../pages/ecommerce'
 
 const Home: NextPage = () => {
   const { activeMenu } = useStateContext()
@@ -18,6 +12,14 @@ const Home: NextPage = () => {
         <meta name="description" content="Dashboard example" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <div className="m-5 flex flex-col items-center justify-center text-center">
+        <p className="text-2xl">Welcome to the Shop Dashboard App</p>
+        <p className="text-2g">Click a Link on the Sidebar to View Common Dashboard Apps & Pages</p>
+        <p className="text-2g">Or Click on The Navbar Icons to See Different Menus</p>
+
+        <p className="mt-10">You Can Also Click on the Settings Icon to Change Theme and Mode.</p>
+      </div>
     </div>
   )
 }
