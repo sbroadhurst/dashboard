@@ -14,6 +14,12 @@ import '../node_modules/@syncfusion/ej2-navigations/styles/material.css'
 import '../node_modules/@syncfusion/ej2-popups/styles/material.css'
 import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css'
 import '../node_modules/@syncfusion/ej2-react-grids/styles/material.css'
+import '../node_modules/@syncfusion/ej2-react-calendars/styles/material.css'
+import '../node_modules/@syncfusion/ej2-react-popups/styles/material.css'
+import '../node_modules/@syncfusion/ej2-lists/styles/material.css'
+import '../node_modules/@syncfusion/ej2-react-schedule/styles/material.css'
+import '../node_modules/@syncfusion/ej2-layouts/styles/material.css'
+import '../node_modules/@syncfusion/ej2-react-kanban/styles/material.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const { activeMenu } = useStateContext()
