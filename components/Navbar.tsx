@@ -57,7 +57,7 @@ const Navbar = () => {
 
   return (
     <div className="navbar fixed w-full bg-main-bg dark:bg-main-dark-bg md:static">
-      <div className="flex justify-between p-2 md:mx-6">
+      <div className="flex justify-end p-2 md:mx-6">
         {screenSize && screenSize <= 1024 ? (
           <NavButton
             title="Menu"
