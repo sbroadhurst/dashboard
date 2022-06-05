@@ -23,6 +23,7 @@ import '../node_modules/@syncfusion/ej2-react-kanban/styles/material.css'
 import '../node_modules/@syncfusion/ej2-richtexteditor/styles/material.css'
 import ThemeSettings from '../components/ThemeSettings'
 import { ThemeProvider } from 'next-themes'
+import Footer from '../components/Footer'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const { activeMenu } = useStateContext()
@@ -36,6 +37,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <div className={`min-h-screen w-full  ${activeMenu ? ' lg:ml-72' : 'flex-2'}`}>
             <Navbar />
             <Component {...pageProps} />
+            <Footer />
           </div>
           <ThemeSettings />
         </div>
