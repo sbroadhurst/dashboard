@@ -21,19 +21,21 @@ import '../node_modules/@syncfusion/ej2-react-schedule/styles/material.css'
 import '../node_modules/@syncfusion/ej2-layouts/styles/material.css'
 import '../node_modules/@syncfusion/ej2-react-kanban/styles/material.css'
 import '../node_modules/@syncfusion/ej2-richtexteditor/styles/material.css'
+import ThemeSettings from '../components/ThemeSettings'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const { activeMenu } = useStateContext()
+  const { activeMenu, currentMode } = useStateContext()
 
   return (
     <ContextProvider>
-      <div className="relative flex  dark:bg-main-dark-bg">
+      <div className={`relative  flex dark:bg-main-dark-bg`}>
         <Settings />
         <Sidebar />
         <div className={`min-h-screen w-full bg-main-bg dark:bg-main-bg ${activeMenu ? ' lg:ml-72' : 'flex-2'}`}>
           <Navbar />
           <Component {...pageProps} />
         </div>
+        <ThemeSettings />
       </div>
     </ContextProvider>
   )

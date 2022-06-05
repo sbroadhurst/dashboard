@@ -6,8 +6,11 @@ import Button from '../components/Button'
 import { GoPrimitiveDot } from 'react-icons/go'
 import { SparkLine } from '../components/Charts/SparkLine'
 import Stacked from '../components/Charts/Stacked'
+import { BsCurrencyDollar } from 'react-icons/bs'
 
-function ecommerce() {
+function Ecommerce() {
+  const { currentColor } = useStateContext()
+
   return (
     <div className="mt-12">
       <div className="flex flex-wrap justify-center lg:flex-nowrap ">
@@ -17,16 +20,15 @@ function ecommerce() {
               <p className="font-bold text-gray-400">Earnings</p>
               <p className="text-2xl">$63,448.78</p>
             </div>
-            {/* <button
+            <button
               type="button"
               style={{ backgroundColor: currentColor }}
-              className="text-2xl opacity-0.9 text-white hover:drop-shadow-xl rounded-full  p-4"
-            >
+              className="opacity-0.9 rounded-full p-4 text-2xl text-white  hover:drop-shadow-xl">
               <BsCurrencyDollar />
-            </button> */}
+            </button>
           </div>
           <div className="mt-6">
-            <Button color="white" bgColor="blue" text="Download" borderRadius="10px" size="md" />
+            <Button color="white" bgColor={currentColor} text="Download" borderRadius="10px" size="md" />
           </div>
         </div>
         <div className="m-3 flex flex-wrap items-center justify-center gap-1">
@@ -89,10 +91,16 @@ function ecommerce() {
                 <p className="mt-1 text-gray-500">Expense</p>
               </div>
               <div className="mt-5">
-                <SparkLine currentColor="white" height="80px" width="250px" data={SparklineAreaData} color="blue" />
+                <SparkLine
+                  currentColor="white"
+                  height="80px"
+                  width="250px"
+                  data={SparklineAreaData}
+                  color={currentColor}
+                />
               </div>
               <div className="mt-10">
-                <Button color="white" bgColor="blue" text="Download Report" borderRadius="10px" size="md" />
+                <Button color="white" bgColor={currentColor} text="Download Report" borderRadius="10px" size="md" />
               </div>
             </div>
             <div>
@@ -105,4 +113,4 @@ function ecommerce() {
   )
 }
 
-export default ecommerce
+export default Ecommerce

@@ -9,7 +9,7 @@ import { useStateContext } from '../contexts/ContextProvider'
 import { links } from '../public/data/dummy'
 
 const Sidebar = () => {
-  const { activeMenu, setActiveMenu, screenSize } = useStateContext()
+  const { activeMenu, setActiveMenu, screenSize, currentColor } = useStateContext()
   const router = useRouter()
 
   const handleCloseSideBar = () => {
@@ -55,6 +55,7 @@ const Sidebar = () => {
                       <Link href={href} key={index}>
                         <div
                           className={router?.pathname === href ? 'activeLink' : 'normalLink'}
+                          style={{ backgroundColor: router?.pathname === href ? currentColor : '' }}
                           onClick={handleCloseSideBar}>
                           {link.icon}
                           <span className="capitalize">{link.name}</span>
