@@ -13,7 +13,7 @@ import {
   Edit,
   Inject,
 } from '@syncfusion/ej2-react-grids'
-import { ordersData, contextMenuItems, ordersGrid } from '../public/data/dummy'
+import { ordersData, ordersGrid } from '../public/data/dummy'
 import Header from '../components/Header'
 
 function orders() {

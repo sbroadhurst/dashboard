@@ -14,8 +14,8 @@ import {
 import { stackedCustomSeries, stackedPrimaryXAxis, stackedPrimaryYAxis } from '../../public/data/dummy'
 
 type Stacked = {
-  height: string
-  width: string
+  height?: string
+  width?: string
 }
 
 const Stacked = ({ width, height }: Stacked) => {
